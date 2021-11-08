@@ -24,6 +24,12 @@ const Header = () => {
           >
             Movie Genre
           </Link>
+          <Link
+            to="/movie"
+            className="inline-block mt-0 text-green-200 hover:text-white mr-4"
+          >
+            Movie
+          </Link>
         </div>
       </div>
     </nav>

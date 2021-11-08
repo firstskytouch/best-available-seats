@@ -18,7 +18,7 @@ const Genre = () => {
     updateGenres();
   }, [updateGenres]);
 
-  const removeEmployee = async (id) => {
+  const removeGenre = async (id) => {
     await deleteGenre(id);
     await updateGenres();
   };
@@ -66,7 +66,7 @@ const Genre = () => {
               </div>
               <div className="flex-auto text-right px-4 py-2 m-2">
                 <button
-                  onClick={() => removeEmployee(genre.id)}
+                  onClick={() => removeGenre(genre.id)}
                   className="block bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-full inline-flex items-center"
                 >
                   Remove

@@ -5,16 +5,16 @@ import Header from "../components/header";
 import Booking from "./Booking";
 import Genre from "./Genre";
 
-import Home from "./Home";
+import Movie from "./Movie";
 
 const App = () => (
   <div>
     <Router>
       <Header />
       <Routes>
-        <Route path="/" extract element={<Genre />} />
-        <Route path="/genre" extract element={<Booking />} />
-        <Route path="/movie" extract element={<Home />} />
+        <Route path="/" extract element={<Booking />} />
+        <Route path="/genre" extract element={<Genre />} />
+        <Route path="/movie" extract element={<Movie />} />
       </Routes>
     </Router>
   </div>
