@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The solution consists of a simple API only Rails application, that exposes the venue details at GET api/best_seats.
+The venue configuration is stored as a JSON file (1.json) in the test/controllers/data directory for the purpose of this solution
 
-Things you may want to cover:
+The UI is implemented using React.
 
-* Ruby version
+## Run
 
-* System dependencies
+```
+$ yarn install
+```
 
-* Configuration
+```
+$ bundle install
+```
 
-* Database creation
+```
+# start the rails application.
+$ rails s
+```
 
-* Database initialization
+## Test
 
-* How to run the test suite
+```
+$ rails t
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To change venue information edit [this files](test/controllers/data/)
