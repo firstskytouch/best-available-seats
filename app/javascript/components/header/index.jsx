@@ -16,13 +16,13 @@ const Header = () => {
             to="/"
             className="inline-block mt-0 text-green-200 hover:text-white mr-4"
           >
-            Movies
+            Seats
           </Link>
           <Link
-            to="/"
+            to="/genre"
             className="inline-block mt-0 text-green-200 hover:text-white mr-4"
           >
-            Seats
+            Movie Genre
           </Link>
         </div>
       </div>

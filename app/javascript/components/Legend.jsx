@@ -12,7 +12,7 @@ const Legend = () => {
         <h4 className="ml-2">RESERVED</h4>
       </div>
       <div className="flex items-center mr-16">
-        <div className="rounded w-6 h-6 bg-gray-500 border-2 border-red-500"></div>
+        <div className="rounded w-6 h-6 bg-green-500 border-2 border-red-500"></div>
         <h4 className="ml-2">BEST SEAT</h4>
       </div>
     </div>

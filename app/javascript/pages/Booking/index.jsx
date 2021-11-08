@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Grid from "../../components/Grid";
 import Legend from "../../components/Legend";
 import Mapper from "../../components/Mapper";
-import { getBestSeats } from "../../services/Api";
+import { getBestSeats } from "../../services/seats";
 
 const Booking = () => {
   const [rows, setRows] = useState(10);
