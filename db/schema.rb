@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_092651) do
+ActiveRecord::Schema.define(version: 2021_11_08_152542) do
 
-  create_table "best_seats", force: :cascade do |t|
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_genres_on_name", unique: true
   end
 
 end
