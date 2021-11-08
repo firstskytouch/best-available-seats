@@ -1,0 +1,2 @@
+module BestSeatHelper
+end
