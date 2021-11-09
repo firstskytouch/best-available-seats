@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :genre
     resources :movie
   end
+  get '*path' => redirect('/')
 end
