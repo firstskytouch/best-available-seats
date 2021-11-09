@@ -2,8 +2,15 @@ import React, { Component } from "react";
 import PlusMinus from "./PlusMinus";
 
 const Mapper = (props) => {
-  const { rows, setRows, numberSeats, setNumberSeats, columns, setColumns } =
-    props;
+  const {
+    rows,
+    setRows,
+    numberSeats,
+    setNumberSeats,
+    columns,
+    setColumns,
+    available,
+  } = props;
 
   return (
     <div className="flex mx-2">
@@ -14,7 +21,7 @@ const Mapper = (props) => {
           defaultValue={numberSeats}
           setNumber={setNumberSeats}
           min={1}
-          max={rows}
+          max={available.length}
         />
       </div>
       <div>

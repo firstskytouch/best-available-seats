@@ -60,6 +60,7 @@ const Booking = () => {
         <div className="mx-4">
           <Mapper
             numberSeats={numberSeats}
+            available={seatAvailable}
             rows={rows}
             columns={columns}
             setNumberSeats={setNumberSeats}
