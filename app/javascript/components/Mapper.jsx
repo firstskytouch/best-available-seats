@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+
 import PlusMinus from "./PlusMinus";
 
 const Mapper = (props) => {

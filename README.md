@@ -5,6 +5,8 @@ The venue configuration is stored as a JSON file (1.json) in the test/controller
 
 The UI is implemented using React.
 
+This application has been deployed to Heroku:  https://best-available-seats.herokuapp.com/
+
 ## Run
 
 ```

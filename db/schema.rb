@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_11_08_163746) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["genre_id"], name: "index_genreships_on_genre_id"
+    t.index ["movie_id", "genre_id"], name: "index_genreships_on_movie_id_and_genre_id", unique: true
     t.index ["movie_id"], name: "index_genreships_on_movie_id"
   end
 

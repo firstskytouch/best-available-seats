@@ -6,9 +6,7 @@ class Api::GenreController < ApplicationController
     end
 
     def create
-        @genre = Genre.create(
-            name: params[:name]
-        )
+        @genre = Genre.create(name: params[:name])
         render json: @genre
     end
 

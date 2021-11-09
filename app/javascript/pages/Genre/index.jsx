@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+
 import {
   createNewGenre,
   deleteGenre,
@@ -58,7 +59,7 @@ const Genre = () => {
         {genres.map((genre) => {
           return (
             <li
-              className="flex items-center bg-gray-100 mb-10 shadow"
+              className="flex items-center bg-gray-100 my-4 shadow"
               key={genre.id}
             >
               <div className="flex-auto text-left px-4 py-2 m-2">

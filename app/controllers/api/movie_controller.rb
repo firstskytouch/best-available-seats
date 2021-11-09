@@ -2,7 +2,7 @@ class Api::MovieController < ApplicationController
     skip_before_action :verify_authenticity_token
 
     def index
-        render json: Movie.all
+        render json: Movie.all, include: [:genreship]
     end
 
     def create
@@ -16,12 +16,15 @@ class Api::MovieController < ApplicationController
         @genres.each do |genre|
             begin
                 @genre = Genre.find(genre)
+                @g = Genre.find(name=genre)
+
+                @genreship = Genreship.create(movie_id: @movie.id, genre_id: @genre.id)
+                @genreship.save()
             rescue ActiveRecord::RecordNotFound  
                 next
+            rescue ActiveRecord::RecordNotUnique
+                next
             end
-            @genreship = Genreship.new
-            @genreship.movie = @movie
-            @genreship.genre = @genre
         end
 
         render json: @movie
@@ -30,11 +33,26 @@ class Api::MovieController < ApplicationController
     def update
         @movie = Movie.find(params[:id])
         @movie.update(movie_params)
+        @genres = params[:genre]
+        @movie.genreship.delete_all
+        @genres.each do |genre|
+            begin
+                @genre = Genre.find(genre)
+                @g = Genre.find(name=genre)
+
+                @genreship = Genreship.create(movie_id: @movie.id, genre_id: @genre.id)
+                @genreship.save()
+            rescue ActiveRecord::RecordNotFound  
+                next
+            rescue ActiveRecord::RecordNotUnique
+                next
+            end
+        end
         render json: @movie
     end
     
     def show
-        render json: Movie.find(params[:id])
+        render json: Movie.find(params[:id]), include: [:genreship]
     end
 
     def destroy
